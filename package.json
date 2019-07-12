@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "start": "node dist/bundle.js",
-    "dev": "webpack-dev-server --mode development"
+    "dev": "webpack-dev-server --mode development",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
   "devDependencies": {
     "@types/node": "^10.11.7",
     "@types/webpack": "^4.1.4",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "ts-loader": "^5.2.1",
     "typescript": "^3.1.3",
     "webpack": "^4.6.0",
@@ -31,9 +34,19 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "@types/jest": "^24.0.15",
     "@types/react": "^16.3.13",
     "@types/react-dom": "^16.0.5",
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "ts-jest": "^24.0.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "setupFiles": [
+      "<rootDir>setup.ts"
+    ]
   }
 }
